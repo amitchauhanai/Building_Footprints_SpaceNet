@@ -1,0 +1,23 @@
+# FastAPI server dependencies
+# Install with:  pip install -r requirements-api.txt
+
+# Web framework
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+python-multipart==0.0.9      # required for UploadFile / Form support
+
+# Deep learning (CPU-only wheel – override with a CUDA wheel in Dockerfile if needed)
+torch==2.3.0
+torchvision==0.18.0
+
+# Geospatial / raster I/O
+rasterio==1.4.3
+numpy==1.26.4
+
+# Image processing & augmentation (needed by dataset.py)
+albumentations==1.4.8
+Pillow==10.3.0
+opencv-python-headless==4.9.0.80   # headless: no GUI deps
+
+# Pydantic (FastAPI uses v2 by default; pin to avoid surprises)
+pydantic==2.7.1

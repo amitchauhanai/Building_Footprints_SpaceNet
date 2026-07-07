@@ -1,0 +1,59 @@
+version: "3.9"
+
+services:
+  building-segmentation-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runtime
+    image: building-segmentation:latest
+    container_name: building_seg_api
+
+    ports:
+      - "8000:8000"
+
+    # Mount the checkpoint and output directories from the host.
+    # This means you never have to rebuild the image when you update weights.
+    volumes:
+      - ./checkpoints:/app/checkpoints:ro          # read-only: model weights
+      - ./outputs:/app/outputs                     # read-write: prediction outputs
+
+    environment:
+      CHECKPOINT_PATH: checkpoints/best.pth
+      IMG_SIZE: "512"
+      THRESHOLD: "0.5"
+      DEVICE: "cpu"                                # change to "cuda" for GPU
+
+    # Healthcheck: poll /health every 30s, allow 60s for startup
+    healthcheck:
+      test: ["CMD", "python", "-c",
+             "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+    restart: unless-stopped
+
+    # Resource limits (adjust for your hardware)
+    deploy:
+      resources:
+        limits:
+          cpus: "2.0"
+          memory: 4G
+
+  # ── Optional: GPU variant ────────────────────────────────────────────────
+  # Uncomment and adjust if you have an NVIDIA GPU + nvidia-container-toolkit
+  #
+  # building-segmentation-api-gpu:
+  #   extends:
+  #     service: building-segmentation-api
+  #   environment:
+  #     DEVICE: "cuda"
+  #   deploy:
+  #     resources:
+  #       reservations:
+  #         devices:
+  #           - driver: nvidia
+  #             count: 1
+  #             capabilities: [gpu]
