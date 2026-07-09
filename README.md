@@ -1,12 +1,47 @@
-# SpaceNet AOI_2_Vegas — Building Detection & Segmentation
+#  SpaceNet AOI_2_Vegas — Building Detection & Segmentation
 
-![Architecture](outputs/vis/architecture_preview.png)
+<p align="center">
+
+<!-- Language -->
+<img src="https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
+
+<!-- Deep Learning -->
+<img src="https://img.shields.io/badge/PyTorch-2.7.1-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white"/>
+<img src="https://img.shields.io/badge/TorchVision-Latest-EE4C2C?style=for-the-badge"/>
+
+<!-- Models -->
+<img src="https://img.shields.io/badge/U--Net-Segmentation-00C853?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/ResNet-34-FF6F00?style=for-the-badge"/>
+
+<!-- Dataset -->
+<img src="https://img.shields.io/badge/SpaceNet-2-0052CC?style=for-the-badge"/>
+
+<!-- Libraries -->
+<img src="https://img.shields.io/badge/OpenCV-4.x-5C3EE8?style=for-the-badge&logo=opencv&logoColor=white"/>
+<img src="https://img.shields.io/badge/NumPy-2.x-013243?style=for-the-badge&logo=numpy&logoColor=white"/>
+<img src="https://img.shields.io/badge/Pandas-2.x-150458?style=for-the-badge&logo=pandas&logoColor=white"/>
+<img src="https://img.shields.io/badge/Albumentations-2.x-00B8D4?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Rasterio-1.x-228B22?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/GDAL-3.x-006400?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Shapely-2.x-8E44AD?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Pillow-11.x-FFD43B?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/TensorBoard-Latest-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white"/>
+
+<!-- Tools -->
+<img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/>
+<img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
+<img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
+
+<!-- OS -->
+<img src="https://img.shields.io/badge/macOS-Apple-000000?style=for-the-badge&logo=apple&logoColor=white"/>
+<img src="https://img.shields.io/badge/Linux-Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white"/>
+
+</p>
+
 
 ### Detect and segment building footprints from satellite imagery using U-Net + ResNet-34.
 
 > *"Feed it a satellite image. Get back precise building footprints."*
-
----
 
 ## The Problem
 
