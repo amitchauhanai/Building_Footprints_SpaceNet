@@ -1,3 +1,6 @@
+<p align="center">
+<img src="Image.jpg" width="350" alt="Logo">
+</p>
 #  SpaceNet AOI_2_Vegas — Building Detection & Segmentation
 
 <p align="center">
