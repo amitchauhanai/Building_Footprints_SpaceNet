@@ -41,7 +41,7 @@
 
 </p>
 
-### SpaceNet AOI_2_Vegas — Building Detection & Segmentation
+# SpaceNet AOI_2_Vegas — Building Detection & Segmentation
 ## Detect and segment building footprints from satellite imagery using U-Net + ResNet-34.
 
 > *"Feed it a satellite image. Get back precise building footprints."*
