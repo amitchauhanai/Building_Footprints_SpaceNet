@@ -1,7 +1,7 @@
 <p align="center">
 <img src="Image.jpg" width="screensize" alt="Logo">
 </p>
-#SpaceNet AOI_2_Vegas — Building Detection & Segmentation
+### SpaceNet AOI_2_Vegas — Building Detection & Segmentation
 
 <p align="center">
 
